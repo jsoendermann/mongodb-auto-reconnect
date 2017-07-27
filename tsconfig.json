@@ -1,0 +1,11 @@
+{
+  "include": ["index.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "target": "es3",
+    "strict": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "lib": ["es2015"]
+  }
+}

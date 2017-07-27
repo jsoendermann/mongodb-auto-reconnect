@@ -1,0 +1,35 @@
+{
+  "name": "mongodb-auto-reconnect",
+  "version": "0.0.1",
+  "description": "Automatically reconnect to your mongo db.",
+  "author": {
+    "name": "Jan Soendermann",
+    "email": "jan.soendermann+npm@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsoendermann/mongodb-auto-reconnect.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsoendermann/mongodb-auto-reconnect/issues"
+  },
+  "homepage": "https://github.com/jsoendermann/mongodb-auto-reconnect#readme",
+  "license": "Apache-2.0",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "scripts": {
+    "lint": "prettier --single-quote --no-semi --trailing-comma all --write \"index.ts\"",
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "precommit": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^2.2.7",
+    "husky": "^0.14.3",
+    "prettier": "^1.5.3",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.30"
+  }
+}
