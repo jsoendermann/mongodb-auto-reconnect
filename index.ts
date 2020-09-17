@@ -1,9 +1,13 @@
 export type GetDb<DB> = () => Promise<DB>
 
-export interface MongoClient<DB> {
-  new (url: string, options: { autoReconnect: boolean }): MongoClient<DB>
+interface MongoClientInstance<DB> {
   db: (dbName: string) => DB
   connect: (callback: (err: Error) => void) => void
+}
+export interface MongoClient<DB> {
+  new (url: string, options: { autoReconnect: boolean }): MongoClientInstance<
+    DB
+  >
 }
 
 export default function <DB>(
